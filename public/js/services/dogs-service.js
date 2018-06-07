@@ -9,8 +9,25 @@ function DogService($http) {
     });
   };
 
+  const addDog = (newDog) =>{
+    return $http({
+      method:"POST", 
+      url:"/portal/dogs", 
+      data: newDog
+    });
+  };
+
+  const deleteDog = (id) =>{
+    return $http({
+      method:"DELETE", 
+      url:"/portal/dogs/" +id, 
+    });
+  };
+
   return {
-    getDogs
+    getDogs, 
+    addDog, 
+    deleteDog
   };
 }
 

@@ -8,7 +8,7 @@ const owners = {
       <input ng-blur="$ctrl.updateOwner(owner);" ng-model="owner.owner_name"> 
       <input ng-blur="$ctrl.updateOwner(owner);" ng-model="owner.owner_address"> 
       <input ng-blur="$ctrl.updateOwner(owner);" ng-model="owner.owner_age"> 
-      <input ng-blur="$ctrl.updateOwner(owner);" ng-model="owner.dog_name"> 
+      <input ng-blur="$ctrl.updateOwner(owner);" ng-model="owner.current_dog_name"> 
       <input ng-blur="$ctrl.updateOwner(owner);" ng-model="owner.fav_stuff"> 
 
       <button ng-click="$ctrl.deleteOwner(owner.owner_id)">Remove Owner</button>

@@ -2,6 +2,18 @@ html{
   font-size: 62.5%;
 }
 
+body {
+  font-size: 1.7rem;
+}
+
 form {
   margin-top: 3rem;
+}
+
+.dogMatches {
+  margin: 2rem;
+  background-color: teal;
+  color: white;
+  padding: 1rem;
+  border-radius: .5rem;
 }

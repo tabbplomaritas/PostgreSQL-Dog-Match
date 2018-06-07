@@ -10,7 +10,7 @@ const pool = require("../connection");
 
 matchesRouter.get("/matches", (req, res) =>{
 
-  pool.query("SELECT * FROM dogs FULL JOIN owners ON dogs.fav_stuff = owners.fav_stuff").then((result) => {
+  pool.query("SELECT * FROM dogs RIGHT JOIN owners ON dogs.fav_stuff = owners.fav_stuff WHERE dogs.fav_stuff = owners.fav_stuff").then((result) => {
     res.send(result.rows);
   });
 });
