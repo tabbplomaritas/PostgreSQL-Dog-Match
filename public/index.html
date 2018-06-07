@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="app" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>TabbNFrankie's Dog Match</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <nav>
+    <a href="#!/dogs">dogs</a>
+    <a href="#!/owners">owners</a>
+    <a href="#!/matches">matches</a>
+  </nav>
+
+  <ng-view></ng-view>
+
+  <script src="https://code.angularjs.org/1.6.5/angular.min.js"></script>
+  <script src="https://code.angularjs.org/1.6.5/angular-route.min.js"></script>
+  <script src="js/module/module.js"></script>
+  <script src="js/config/config.js"></script>
+  <script src="js/components/dogs-comp.js"></script>
+  <script src="js/components/owners-comp.js"></script>
+  <script src="js/components/matches-comp.js"></script>
+  <script src="js/services/dogs-service.js"></script>
+  <script src="js/services/owners-service.js"></script>
+  <script src="js/services/matches-service.js"></script>
+</body>
+</html>
