@@ -22,7 +22,7 @@ const owners = {
       <label>Age</label>
       <input ng-model="$ctrl.newOwner.owner_age"> 
       <label>Dog's name</label>
-      <input ng-model="$ctrl.newOwner.dog_name"> 
+      <input ng-model="$ctrl.newOwner.current_dog_name"> 
       <label>Fav Stuff</label>
       <input ng-model="$ctrl.newOwner.fav_stuff"> 
       <button>Add New Owner</button>
@@ -39,9 +39,12 @@ const owners = {
     });
 
     vm.addOwner = (newOwner) => {
+      console.log("addOwner button working");
       OwnersService.addOwner(newOwner).then((response) => {
+        console.log("addOwner service method working");
+        
         vm.owners = response.data;
-        console.log(vm.owners);
+        
         });
       vm.newOwner = {};
     };

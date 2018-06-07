@@ -17,7 +17,7 @@ ownersRouter.get("/owners", (req, res) =>{
 });
 
 ownersRouter.post("/owners", (req, res) =>{
-  pool.query("INSERT INTO owners(owner_name, owner_address, owner_age, dog_name, fav_stuff) VALUES($1::text, $2::text, $3::int, $4::text, $5::text)", [req.body.owner_name, req.body.owner_address, req.body.owner_age, req.body.dog_name, req.body.fav_stuff]).then(() => {
+  pool.query("INSERT INTO owners(owner_name, owner_address, owner_age, current_dog_name, fav_stuff) VALUES($1::text, $2::text, $3::int, $4::text, $5::text)", [req.body.owner_name, req.body.owner_address, req.body.owner_age, req.body.dog_name, req.body.fav_stuff]).then(() => {
     pool.query("SELECT * FROM owners ORDER BY owner_id").then((result) => {
       console.log(result.rows);
       res.send(result.rows);
